@@ -1,0 +1,28 @@
+[package]
+name = "encrsypter"
+version = "0.1.0"
+authors = ["gohck <ck.goh1439@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aes-gcm = "0.6.0"
+rand = "0.7.3"
+
+[lib]
+name = "encrsypter_lib"
+path = "src/lib.rs"
+
+[[test]]
+# name = "cucumber"
+# name = "cucumber_encryptor"
+name = "cucumber_example01"
+# name = "cucumber_example02"
+harness = false # Allows Cucumber to print output instead of libtest
+
+[dev-dependencies]
+cucumber = { package = "cucumber_rust", version = "^0.7.0" }
+base64 = "0.12.3"
+futures = "0.3.6"
+async-trait = "0.1.41"
